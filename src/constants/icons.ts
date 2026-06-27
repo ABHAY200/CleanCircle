@@ -1,0 +1,56 @@
+import type { LucideIcon } from 'lucide-react';
+import {
+  Home,
+  Building2,
+  Briefcase,
+  Car,
+  Sparkles,
+  Droplets,
+  Wind,
+  Sofa,
+  Layers,
+  Paintbrush,
+  Shield,
+  Leaf,
+  Zap,
+  Star,
+  Clock,
+  MapPin,
+  Users,
+  MessageSquare,
+  Heart,
+  Settings,
+  BarChart3,
+  FileText,
+  Wrench,
+} from 'lucide-react';
+
+export const ICONS: Record<string, LucideIcon> = {
+  home: Home,
+  building: Building2,
+  office: Briefcase,
+  car: Car,
+  sparkles: Sparkles,
+  droplets: Droplets,
+  wind: Wind,
+  sofa: Sofa,
+  layers: Layers,
+  paintbrush: Paintbrush,
+  shield: Shield,
+  leaf: Leaf,
+  zap: Zap,
+  star: Star,
+  clock: Clock,
+  mapPin: MapPin,
+  users: Users,
+  messageSquare: MessageSquare,
+  heart: Heart,
+  settings: Settings,
+  barChart3: BarChart3,
+  fileText: FileText,
+  wrench: Wrench,
+};
+
+export const getCategoryIcon = (iconName: string): LucideIcon => {
+  return ICONS[iconName] ?? Sparkles;
+};
