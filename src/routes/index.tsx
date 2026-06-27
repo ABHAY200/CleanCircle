@@ -28,7 +28,10 @@ import { AdminUsers } from '@/pages/admin/Users/Users';
 import { AdminServices } from '@/pages/admin/Services/Services';
 import { AdminReports } from '@/pages/admin/Reports/Reports';
 
-export const router = createBrowserRouter([
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+export const router = createBrowserRouter(
+[
   {
     element: <MainLayout />,
     children: [
@@ -71,7 +74,9 @@ export const router = createBrowserRouter([
     ],
   },
   { path: '*', element: <Navigate to={ROUTES.HOME} replace /> },
-]);
+],
+{ basename },
+);
 
 export function AppRouter() {
   return <RouterProvider router={router} />;
